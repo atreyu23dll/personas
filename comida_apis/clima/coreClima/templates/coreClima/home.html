@@ -1,0 +1,10 @@
+<h1>Vista de personas y registro</h1>
+
+<a href="{% url 'registrar_usuario' %}">Registrar usarios</a>
+
+<h2>Lista de personas</h2>
+<ul>
+    {% for persona in personas %}
+        <li>{{ persona.nombre }} - {{ persona.email }}</li>
+    {% endfor %}
+</ul>
