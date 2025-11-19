@@ -1,4 +1,9 @@
 from django.db import models
-from ../coreClima/models.py import persona
 
 # Create your models here.
+class persona(models.Model):
+    nombre = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.nombre
